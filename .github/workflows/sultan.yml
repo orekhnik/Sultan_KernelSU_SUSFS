@@ -18,6 +18,9 @@ on:
       kernel_version:
         required: true
         type: string
+      sultan_branch:
+        required: true
+        type: string
   
 jobs:
   build-kernel-sultan-kernelsu-susfs:
@@ -68,7 +71,7 @@ jobs:
           #git checkout b5c3ada461a61c6ad033693b7a00494ead3a28fd
           #cd ..
           git clone https://github.com/TheWildJames/kernel_patches.git
-          git clone https://github.com/kerneltoast/${{ inputs.repo }}
+          git clone https://github.com/kerneltoast/${{ inputs.repo }} -b "${{ inputs.sultan_branch }}"
       
       - name: Add KernelSU
         run: |
