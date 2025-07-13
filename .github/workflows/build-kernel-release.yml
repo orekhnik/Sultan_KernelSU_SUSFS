@@ -31,6 +31,7 @@ jobs:
       repo: "android_kernel_google_zuma"
       android_version: "android14"
       kernel_version: "6.1"
+      sultan_branch: "15.0.0-sultan"
 
   build-kernel-zumapro:
     uses: ./.github/workflows/sultan.yml
